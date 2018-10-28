@@ -41,7 +41,7 @@ tycho$Plx <- as.numeric(tycho$Plx)
 symbad_numeric = data.frame(symbad[,5:8])
 #Numeric Hipparcos
 hipparcos_numeric = data.frame(hipparcos[,2:8])
-#Numeric Symbad
+#Numeric Tycho
 tycho_numeric = data.frame(tycho[,5:15])
 
 #Clearing missing values variables from tycho
@@ -59,7 +59,6 @@ summary(sym.pca.cov)
 summary(hip.pca.cov)
 summary(tyc.pca.cov)
 
-
 #Calcula la matriz de correlación
 matrizCorrelacionSymbad = cor(symbad_numeric)
 matrizCorrelacionHipparcos = cor(hipparcos_numeric)
@@ -69,9 +68,4 @@ matrizCorrelacionTycho = cor(tycho_numeric)
 corrplot.mixed(matrizCorrelacionSymbad, lower = "number", upper = "shade", addshade = "all")
 corrplot.mixed(matrizCorrelacionHipparcos, lower = "number", upper = "shade", addshade = "all")
 corrplot.mixed(matrizCorrelacionTycho, lower = "number", upper = "shade", addshade = "all")
-
-
-
-
-
 
